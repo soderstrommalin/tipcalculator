@@ -17,7 +17,7 @@ function Tip({ symbolsArr }) {
               key={item}
               onClick={(e) => handleInput(e, 'tip')}
               value={item}
-              className={tip == item ? 'active tip-option' : 'tip-option'}
+              className={tip === item ? 'active tip-option' : 'tip-option'}
             >
               {item}
             </button>

@@ -21,7 +21,7 @@ export const CalcProvider = ({ children }) => {
   }
 
   const validateInputs = () => {
-    if ((bill || tip || people) == NaN || (bill || tip || people) < 1) {
+    if ((bill || tip || people) === NaN || (bill || tip || people) < 1) {
       return false
     }
     return true
@@ -38,9 +38,9 @@ export const CalcProvider = ({ children }) => {
   const handleInput = (e, currVal) => {
     e.preventDefault()
     const val = e.currentTarget.value
-    currVal == 'tip' && setTip(val)
-    currVal == 'bill' && setBill(val)
-    currVal == 'people' && setPeople(val)
+    currVal === 'tip' && setTip(val)
+    currVal === 'bill' && setBill(val)
+    currVal === 'people' && setPeople(val)
   }
 
   return (
