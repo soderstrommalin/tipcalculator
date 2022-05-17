@@ -11,7 +11,7 @@ export const CalcProvider = ({ children }) => {
 
   const calculateTip = () => {
     if (validateInputs()) {
-      const currTipAmount = bill / tip / people
+      const currTipAmount = bill * (tip / 100) / people
       const currTotal = currTipAmount + bill / people
       if (Number.isFinite(currTipAmount) && Number.isFinite(currTotal)) {
         setTipAmount(currTipAmount.toFixed(2))
@@ -28,8 +28,8 @@ export const CalcProvider = ({ children }) => {
   }
 
   const reset = () => {
-    setTipAmount(0)
-    setTotal(0)
+    setTipAmount()
+    setTotal()
     setTip('')
     setPeople('')
     setBill('')
