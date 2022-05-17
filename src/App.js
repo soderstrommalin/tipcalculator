@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import logo from './images/logo.svg'
+import Form from './components/Form'
+import { CalcProvider } from './context/CalcContext'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <CalcProvider>
+      <main className='app-container'>
+        <div className='heading'>
+          <img src={logo} alt='Splitter' />
+        </div>
+        <Form />
+      </main>
+    </CalcProvider>
+  )
 }
 
-export default App;
+export default App
